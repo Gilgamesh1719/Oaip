@@ -5,9 +5,9 @@ name: .NET
 
 on:
   push:
-    branches: [ "main", "move"]
+    branches: [ "main", "move", "lab2"]
   pull_request:
-    branches: [ "main", "move"]
+    branches: [ "main", "move", "lab2"]
 
 jobs:
   build:
