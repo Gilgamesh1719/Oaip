@@ -49,5 +49,4 @@ public class StartMoveCMDTests
         var cmd = new StartMovecom(v.Object);
         Assert.Throws<NullReferenceException>(()=>cmd.execute());
     }
-    
 }
