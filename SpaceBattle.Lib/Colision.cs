@@ -13,8 +13,9 @@ public class Colision : Icomand
         foreach (var item in vek){
             tree1 = (IDictionary<int, object>)tree1[item];
         }
-        var cmd = tree1.Keys.First() == 1 ? IoC.Resolve<Icomand>("colision", this.obj1, this.obj2):(Icomand?)null;
-        cmd.execute();
+        if(tree1.Keys.First() == 1){
+            IoC.Resolve<Icomand>("colision", this.obj1, this.obj2).execute();
+        }
     }
     private List<int> gettree(Iuobject o1, Iuobject o2){
         var a = IoC.Resolve<List<int>>("getlist", o1);

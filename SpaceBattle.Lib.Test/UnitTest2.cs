@@ -28,7 +28,6 @@ public class UniTest2
 
         new InitScopeBasedIoCImplementationCommand().Execute();
         IoC.Resolve<Hwdtech.ICommand>("Scopes.Current.Set", IoC.Resolve<object>("Scopes.New", IoC.Resolve<object>("Scopes.Root"))).Execute();
-
         IoC.Resolve<Hwdtech.ICommand>("IoC.Register", "Tree", (object[] props) => DictStrat.Object.run()).Execute();
         IoC.Resolve<Hwdtech.ICommand>("IoC.Register", "colision", (object[] props) => PropStrat.Object.run()).Execute();
         IoC.Resolve<Hwdtech.ICommand>("IoC.Register", "getlist", (object[] props) => ListStart.Object.run(props)).Execute();
