@@ -7,5 +7,4 @@ public class moveCMD: Icomand{
     public void execute(){
         this.obj1.Coords+=this.obj1.velocity;
     }
-
 }
