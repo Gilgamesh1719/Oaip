@@ -15,10 +15,8 @@ public class Colision : Icomand
         }
         if(tree1.Keys.First() == 1){
             IoC.Resolve<Icomand>("colision", this.obj1, this.obj2).execute();
-        }
-        else{
-            IoC.Resolve<Icomand>("empty").execute();
-        }
+        } // Метод First не вернет исключение, по причине того, что мы работаем с деревом, которое не может быть пустым. Косательно IoC'а
+          // исключение может возникнуть в самой стратегии, но оно должно быть отловлено там. 
     }
     private List<int> gettree(Iuobject o1, Iuobject o2){
         var a = IoC.Resolve<List<int>>("getlist", o1);
